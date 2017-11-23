@@ -1,0 +1,4 @@
+dist: trusty
+script:
+  - cd gradle-examples/4/gradle-example
+  - ./gradlew build
