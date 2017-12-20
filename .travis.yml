@@ -1,4 +1,20 @@
 dist: trusty
+sudo: false
+language: java
+
+env:
+  - PROJECT="gradle-android-example"
+  - PROJECT="gradle-cache-example"
+  - PROJECT="gradle-example-bintray-info"
+  - PROJECT="gradle-example-ci-server-bintray-info"
+  - PROJECT="gradle-example-ci-server"
+  - PROJECT="gradle-example-minimal"
+  - PROJECT="gradle-example-multi-repos"
+  - PROJECT="gradle-example-publish-bintray-info"
+  - PROJECT="gradle-example-publish"
+  - PROJECT="gradle-example"
+  - PROJECT="gradle-jcenter-resolve"
+
 script:
-  - cd gradle-examples/4/gradle-example
+  - cd gradle-examples/4/${PROJECT}
   - ./gradlew build
